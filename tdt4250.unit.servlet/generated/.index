@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.servlet" increment="1568879125086">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="tdt4250.unit.servlet"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="0.0.0.201909190745" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="0.0.0.201909190745" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="tdt4250.unit.servlet"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="0.0.0.201909190745" type="Version"/>
+      <attribute name="osgi.wiring.host" value="tdt4250.unit.servlet"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="javax.servlet.Servlet" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="3540" type="Long"/>
+      <attribute name="url" value="generated/tdt4250.unit.servlet.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="145D5487EEBF86657E6F02D8F8FEBA87AF59D2395E9E9892C56F0FA0555183E1"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/matstyldum/Code/tdt4250-assignment2"/>
+      <attribute name="project.path" value="/tdt4250.unit.servlet"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet.http))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.implementation">
+      <directive name="filter" value="(&amp;(osgi.implementation=osgi.http)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.contract">
+      <directive name="filter" value="(&amp;(osgi.contract=JavaServlet)(version=3.1.0))"/>
+      <attribute name="osgi.contract" value="JavaServlet"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>
