@@ -1,0 +1,25 @@
+{
+    // Comments are explicitly permitted in configuration files.
+    // To comply with strict JSON this file should be minified
+
+    // Global Configuration file identity
+    ":configurator:resource-version" : 1,
+    ":configurator:symbolicname" : "tdt4250.unit.util.config",
+    ":configurator:version" : "0.0.0",
+
+    /*
+    // This is a singleton configuration
+
+    "org.bndtools.example.template.configuration": {
+           "foo": "bar", 
+           "foobar": 42},
+    */
+
+    /*
+    // This is a factory configuration
+
+    "org.bndtools.example.template.factory.configuration~": {
+           "fizz": "buzz", 
+           "fizzbuzz": 3.141592653589793},
+    */
+}

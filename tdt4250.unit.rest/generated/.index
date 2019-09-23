@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.rest" increment="1569242236245">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="tdt4250.unit.rest"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="0.0.0.201909231237" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="0.0.0.201909231237" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="tdt4250.unit.rest"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="0.0.0.201909231237" type="Version"/>
+      <attribute name="osgi.wiring.host" value="tdt4250.unit.rest"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="2825" type="Long"/>
+      <attribute name="url" value="generated/tdt4250.unit.rest.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="0D1CA662F817F3CB9630CBF64AE4516FA59B2438994A3FCBA5DD72F7E4F88655"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/matstyldum/Code/eclipse/tdt4250-assignment2"/>
+      <attribute name="project.path" value="/tdt4250.unit.rest"/>
+    </capability>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

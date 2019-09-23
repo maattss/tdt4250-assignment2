@@ -1,0 +1,12 @@
+Bundle-Version: 1.0.0.${tstamp}
+
+-baseline: *
+-buildpath: \
+  osgi.annotation; version=7.0.0,\
+  osgi.cmpn; version=7.0.0
+
+javac.source: 1.8
+javac.target: 1.8
+
+-includeresource: resources
+-privatepackage: tdt4250.unit.util
