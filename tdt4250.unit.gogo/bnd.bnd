@@ -1,7 +1,9 @@
 -buildpath: \
-	osgi.annotation; version=7.0.0,\
-	osgi.core; version=7.0.0,\
-	osgi.cmpn; version=7.0.0
+	osgi.annotation;version=7.0.0,\
+	osgi.core;version=7.0.0,\
+	osgi.cmpn;version=7.0.0,\
+	tdt4250.unit.api,\
+	org.apache.felix.gogo.runtime
 
 -testpath: \
 	${junit},\

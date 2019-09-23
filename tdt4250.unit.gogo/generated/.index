@@ -1,29 +1,41 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.gogo" increment="1569242051335">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.gogo" increment="1569253504864">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.unit.gogo"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="0.0.0.201909231234" type="Version"/>
+      <attribute name="version" value="0.0.0.201909231545" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="0.0.0.201909231234" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201909231545" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.unit.gogo"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="0.0.0.201909231234" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201909231545" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.unit.gogo"/>
     </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="tdt4250.unit.gogo.UnitCommands" type="List&lt;String&gt;"/>
+    </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="2826" type="Long"/>
+      <attribute name="size" value="8248" type="Long"/>
       <attribute name="url" value="generated/tdt4250.unit.gogo.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="77CCED2C0BB330F77121CE755CC194C5C3A12D3B42922D56936A11CCBA7D60F5"/>
+      <attribute name="osgi.content" value="2C588040870709079EA452786248EA89DA69EB5CFBF7DB45EC99F612BD7715F2"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/matstyldum/Code/eclipse/tdt4250-assignment2"/>
       <attribute name="project.path" value="/tdt4250.unit.gogo"/>
     </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.service.command)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.9.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=tdt4250.unit.api)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
     <requirement namespace="osgi.extender">
       <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
     </requirement>

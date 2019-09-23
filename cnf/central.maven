@@ -1,2 +1,9 @@
 # List repository contents using GAV coordinates
 
+com.fasterxml.jackson.core:jackson-core:2.9.8
+com.fasterxml.jackson.core:jackson-annotations:2.9.8
+com.fasterxml.jackson.core:jackson-databind:2.9.8
+#com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.9.8
+#com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.8
+#com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.8
+#org.apache.aries.jax.rs:org.apache.aries.jax.rs.jackson:1.0.2
