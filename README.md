@@ -10,7 +10,7 @@ The root project and folder was created using the BndTools' Bnd OSGi Workspace w
 
 To make your own OSGi project with a similar structure, it's best to start with a fresh Eclipse workspace, create a Bnd OSGi Workspace there and the bundles one by one, making sure to "guess" the right template to use. To be able to glance at this example while working on your own, open the example workspace in a different Eclipse installation, since it's difficult to open the same Eclipse one different workspaces simultaneously.
 
-To run the project, you should open the launch.bndrun file in the servlet bundle, make sure it resolves and use Run OSGi. You can try various commands in the gogo shell, e.g. felix:lb to see which bundles are in which states or scr:list to se the active components, and do a dictionary lookup using http://localhost:8080/dict?q=master in a browser.
+To run the project, you should open the launch.bndrun file in the servlet bundle, make sure it resolves and use Run OSGi. You can try various commands in the gogo shell, e.g. felix:lb to see which bundles are in which states or scr:list to se the active components, and do a dictionary lookup using http://localhost:8080/unit?q=master in a browser.
 
 ## Bundles and packages
 
