@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class UnitSearch {
 
-	private static final String DEFAULT_MESSAGE = "Sorry, no matches";
+	private static final String DEFAULT_MESSAGE = "Sorry, no conversions found";
 	private Collection<Unit> conversions = new ArrayList<Unit>();
 	
 	public void addConversion(Unit unit) {
@@ -24,11 +24,12 @@ public class UnitSearch {
 	}
 	
 	private UnitSearchResult search(String searchKey, Iterable<Unit> conversions) {
+		System.out.println("Conversions " + conversions);
 		StringBuilder messages = new StringBuilder();
 		URI link = null;
 		boolean success = false;
 		for (Unit unit : conversions) {
-			UnitSearchResult result = unit.search(searchKey);
+			UnitSearchResult result = unit.convert(searchKey);
 			if (result.isSuccess()) {
 				messages.append(result.getMessage());
 				messages.append("(" + unit.getUnitName() + ")\n");
@@ -44,11 +45,7 @@ public class UnitSearch {
 		return new UnitSearchResult(success, messages.toString(), link);
 	}
 
-	public UnitSearchResult search(String dictKey, String searchKey) {
-		return search(searchKey, conversions.stream().filter(dict -> dict.getUnitName().equals(dictKey)).collect(Collectors.toList()));
-	}
-
-	public UnitSearchResult search(String searchKey) {
-		return search(searchKey, conversions);
+	public UnitSearchResult search(String unitKey, String searchKey) {
+		return search(searchKey, conversions.stream().filter(unit -> unit.getUnitName().equals(unitKey)).collect(Collectors.toList()));
 	}
 }

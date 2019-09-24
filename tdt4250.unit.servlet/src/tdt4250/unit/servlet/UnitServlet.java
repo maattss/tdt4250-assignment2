@@ -34,8 +34,8 @@ import tdt4250.unit.api.UnitSearchResult;
  * circle Dict
  * component DictServlet
  * UnitServlet -right-( "*" Unit: "conversions"
- * component NbDict
- * Unit -- NbDict
+ * component ?
+ * Unit -- ?
  *@enduml
  */
 
@@ -62,19 +62,25 @@ public class UnitServlet extends HttpServlet implements Servlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<String> segments = new ArrayList<>();
-		String path = request.getPathTranslated();
+		//String path = request.getPathTranslated();
+		String path = request.getPathInfo();
+		
 		if (path != null) {
 			segments.addAll(Arrays.asList(path.split("\\/")));
 		}
 		if (segments.size() > 0 && segments.get(0).length() == 0) {
 			segments.remove(0);
 		}
-		if (segments.size() > 1) {
+		
+		if (segments.size() != 1) {
 			response.sendError(HttpServletResponse.SC_NOT_ACCEPTABLE, "Request must contain max 1 path segment");
 			return;
 		}
+		System.out.println("Segment: " + segments.get(0));
+		System.out.println("Path: " + path);
+		
 		String q = request.getParameter("q");
-		UnitSearchResult result = (segments.size() == 0 ? unitSearch.search(q) : unitSearch.search(segments.get(0), q));
+		UnitSearchResult result = unitSearch.search(segments.get(0), q);
 		response.setContentType("text/plain");
 		PrintWriter writer = response.getWriter();
 		if (result.getLink() != null) {

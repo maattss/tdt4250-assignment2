@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.api" increment="1569177936800">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.api" increment="1569325284597">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.unit.api"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.201909221845" type="Version"/>
+      <attribute name="version" value="1.0.0.201909241141" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.201909221845" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201909241141" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.unit.api"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.201909221845" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201909241141" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.unit.api"/>
     </capability>
     <capability namespace="osgi.wiring.package">
@@ -19,10 +19,10 @@
       <attribute name="osgi.wiring.package" value="tdt4250.unit.api"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="6735" type="Long"/>
+      <attribute name="size" value="6839" type="Long"/>
       <attribute name="url" value="generated/tdt4250.unit.api.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="9681D3CFB68F9E6EC500930CD9B36EEA6B5EA67DEABF90DB16E3D852DE6D1E7F"/>
+      <attribute name="osgi.content" value="569C9E90DD8A49F64BE6455CEA54622D0C46E13F3C19DC0B9ECC8B39904DC5D2"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/matstyldum/Code/eclipse/tdt4250-assignment2"/>

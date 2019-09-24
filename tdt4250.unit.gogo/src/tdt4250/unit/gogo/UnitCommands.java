@@ -28,40 +28,40 @@ import tdt4250.unit.api.UnitSearchResult;
 	)
 public class UnitCommands {
 
-	@Descriptor("list available dictionaries")
-	public void list() {
-		Activator activator = Activator.getActivator();
-		System.out.print("Dictionaries: ");
-		for (String dictName : activator.getAllDictComponentNames()) {
-			System.out.print(dictName);
-			if (activator.isManual(dictName)) {
-				System.out.print("*");						
-			}
-			System.out.print(" ");
-		}
-		System.out.println();
-	}
-
-	@Descriptor("look up a word in each available dictionary")
-	public void lookup(
-			@Descriptor("the word to look up")
-			String s
-			) {
-		BundleContext bc = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
-		try {
-			// iterate through all Unit service objects
-			for (ServiceReference<Unit> serviceReference : bc.getServiceReferences(Unit.class, null)) {
-				Unit dict = bc.getService(serviceReference);
-				try {
-					UnitSearchResult search = dict.search(s);
-					System.out.println(dict.getUnitName() + ": " + search.getMessage());
-				} finally {
-					bc.ungetService(serviceReference);
-				}
-			}
-		} catch (InvalidSyntaxException e) {
-		}
-	}
+//	@Descriptor("list available dictionaries")
+//	public void list() {
+//		Activator activator = Activator.getActivator();
+//		System.out.print("Dictionaries: ");
+//		for (String dictName : activator.getAllDictComponentNames()) {
+//			System.out.print(dictName);
+//			if (activator.isManual(dictName)) {
+//				System.out.print("*");						
+//			}
+//			System.out.print(" ");
+//		}
+//		System.out.println();
+//	}
+//
+//	@Descriptor("look up a word in each available dictionary")
+//	public void lookup(
+//			@Descriptor("the word to look up")
+//			String s
+//			) {
+//		BundleContext bc = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
+//		try {
+//			// iterate through all Unit service objects
+//			for (ServiceReference<Unit> serviceReference : bc.getServiceReferences(Unit.class, null)) {
+//				Unit dict = bc.getService(serviceReference);
+//				try {
+//					UnitSearchResult search = dict.search(s);
+//					System.out.println(dict.getUnitName() + ": " + search.getMessage());
+//				} finally {
+//					bc.ungetService(serviceReference);
+//				}
+//			}
+//		} catch (InvalidSyntaxException e) {
+//		}
+//	}
 	
 	// TODO: Add and remove unit converters
 //	@Descriptor("Add a dictionary, with content from a URL and/or specific words")

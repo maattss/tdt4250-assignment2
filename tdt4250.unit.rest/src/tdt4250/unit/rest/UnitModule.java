@@ -15,7 +15,7 @@ public class UnitModule extends Module {
 
 	@Override
 	public String getModuleName() {
-		return "DictModule";
+		return "UnitModule";
 	}
 
 	@Override

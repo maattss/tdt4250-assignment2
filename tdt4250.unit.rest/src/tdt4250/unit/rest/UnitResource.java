@@ -24,7 +24,7 @@ import tdt4250.unit.api.UnitSearchResult;
 
 @Component(service=UnitResource.class)
 @JaxrsResource
-@Path("dict")
+@Path("unit")
 public class UnitResource {
 
 	@Reference(
@@ -32,20 +32,14 @@ public class UnitResource {
 			)
 	private volatile Collection<Unit> conversions;
 	
-	public UnitSearch getDictSearch() {
+	public UnitSearch getUnitSearch() {
 		return new UnitSearch(conversions.toArray(new Unit[conversions.size()]));
-	}
-
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	public UnitSearchResult search(@QueryParam("q") String q) throws JsonProcessingException {
-		return getDictSearch().search(q);
 	}
 	
 	@GET
-	@Path("/{lang}")
+	@Path("/{conversion}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public UnitSearchResult search(@PathParam("lang") String lang, @QueryParam("q") String q) throws JsonProcessingException {
-		return getDictSearch().search(lang, q);
+	public UnitSearchResult search(@PathParam("conversion") String conversion, @QueryParam("q") String q) throws JsonProcessingException {
+		return getUnitSearch().search(conversion, q);
 	}
 }
