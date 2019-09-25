@@ -76,8 +76,6 @@ public class UnitServlet extends HttpServlet implements Servlet {
 			response.sendError(HttpServletResponse.SC_NOT_ACCEPTABLE, "Request must contain max 1 path segment");
 			return;
 		}
-		System.out.println("Segment: " + segments.get(0));
-		System.out.println("Path: " + path);
 		
 		String q = request.getParameter("q");
 		UnitSearchResult result = unitSearch.search(segments.get(0), q);

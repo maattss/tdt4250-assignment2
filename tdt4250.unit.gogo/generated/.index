@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.gogo" increment="1569415441559">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.gogo" increment="1569416116936">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.unit.gogo"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="0.0.0.201909251244" type="Version"/>
+      <attribute name="version" value="0.0.0.201909251255" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="0.0.0.201909251244" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201909251255" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.unit.gogo"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="0.0.0.201909251244" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201909251255" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.unit.gogo"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" value="tdt4250.unit.gogo.UnitCommands" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="9880" type="Long"/>
+      <attribute name="size" value="9779" type="Long"/>
       <attribute name="url" value="generated/tdt4250.unit.gogo.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="6700BD653B4A09DCCFA903BB5A5F7172F28766DF17A357F3A9EC4E642B0BE2C3"/>
+      <attribute name="osgi.content" value="FF9923F012BC89B9789F482A7681E7C117FCE211647DA691B5FBFCE636BFBC9C"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/matstyldum/Code/eclipse/tdt4250-assignment2"/>

@@ -1,13 +1,14 @@
 package tdt4250.unit.util;
 
+
+import java.util.HashMap;
+import java.util.Map;
+
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Modified;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.script.*;
 
@@ -28,8 +29,6 @@ public class UnitsConvert implements Unit {
 
 	private String name;
 	private String conversion;
-	
-	private final ScriptEngine engine =  new ScriptEngineManager().getEngineByName("JavaScript");
 	
 	@Override
 	public String getUnitName() {
@@ -65,7 +64,6 @@ public class UnitsConvert implements Unit {
 	}
 	
 	protected void update(BundleContext bc, UnitsConvertConfig config) {
-		System.out.println("Initializing conversion: " + config.unitName() + " " + config.unitConversion());
 		setUnitName(config.unitName());
 		setUnitConversion(config.unitConversion());
 	}
@@ -76,6 +74,7 @@ public class UnitsConvert implements Unit {
 		Double numb = Double.parseDouble(convertNumber);
 		try {
 			vars.put("x", Double.parseDouble(convertNumber));
+			ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
 			result = String.format("%.2f", engine.eval(conversion, new SimpleBindings(vars)));
 		} catch (Exception e) {
 			if (e instanceof ScriptException) {

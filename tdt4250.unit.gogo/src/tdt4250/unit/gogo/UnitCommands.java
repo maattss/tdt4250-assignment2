@@ -55,13 +55,10 @@ public class UnitCommands {
 		BundleContext bc = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
 		try {
 			for (ServiceReference<Unit> serviceReference : bc.getServiceReferences(Unit.class, null)) {
-				Unit dict = bc.getService(serviceReference);
+				Unit unit = bc.getService(serviceReference);
 				try {
-					if (dict != null) {
-						System.out.print(dict.getUnitName());
-						if (getConfig(dict.getUnitName()) != null) {
-							System.out.print("*");						
-						}
+					if (unit != null) {
+						System.out.print(unit.getUnitName());
 					}
 				} finally {
 					bc.ungetService(serviceReference);
@@ -90,7 +87,7 @@ public class UnitCommands {
 					if(unit.getUnitName().equals(conversion)) {
 						try {
 							UnitSearchResult convert = unit.convert(number);
-							System.out.println(unit.getUnitName() + ": " + convert.getMessage());
+							System.out.println(convert.getMessage());
 							found = true;
 						} finally {
 							bc.ungetService(serviceReference);
