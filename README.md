@@ -8,25 +8,30 @@ This project is built as a modular, flexible OSGi project og a unit conversion s
 
 The root project and folder was created using the BndTools' Bnd OSGi Workspace wizard, and each bundle with the Bnd OSGi Project wizard. Which bundle template to use depends on the specific bundle, there are api, component and servlet bundles in this project.
 
-To make your own OSGi project with a similar structure, it's best to start with a fresh Eclipse workspace, create a Bnd OSGi Workspace there and the bundles one by one, making sure to "guess" the right template to use. To be able to glance at this example while working on your own, open the example workspace in a different Eclipse installation, since it's difficult to open the same Eclipse one different workspaces simultaneously.
+To run the project, you should open the launch.bndrun file in the servlet bundle, make sure it resolves and use Run OSGi. You can try various commands in the gogo shell, e.g. felix:lb to see which bundles are in which states or scr:list to se the active components, and do a convertion using http://localhost:8080/unit/{conversion}?q={number} in a browser (e.g.localhost:8080/unit/kmtomiles?q=10).
 
-To run the project, you should open the launch.bndrun file in the servlet bundle, make sure it resolves and use Run OSGi. You can try various commands in the gogo shell, e.g. felix:lb to see which bundles are in which states or scr:list to se the active components, and do a dictionary lookup using http://localhost:8080/unit/{conversion}?q={number} in a browser (e.g.localhost:8080/unit/kmtomiles?q=10)
+Some conversions are defined as core conversions and included in project (i.e. "Km to miles", "Miles to km", "Celsius to Fahrenheit" and "Fahrenheit to Celsius"). In addition to this, it is possible to add new conversions by developing own components or adding simple ones with the command line tool (further explained below).
 
 ## Bundles and packages
 
-- tdt4250.unit.api: Describe
-- tdt4250.unit.servlet: Describe
-- tdt4250.unit.util: Describe
-- tdt4250.unit.gogo: Gogo shell commands for managing **Unit** service components.
+The workspace contains of 9 different bundles.
 
-## Core conversions
+- tdt4250.unit.api: The core interfaces and classes that will be used for convertions.
+- tdt4250.unit.servlet: The Servlet component implementing a web service for converting numbers between different units.
+- tdt4250.unit.rest: TODO: Describe
+- tdt4250.unit.util: Class for managing core convertionsused by all the core convertions currently implemented
+- tdt4250.unit.gogo: Gogo shell commands for managing **Unit** service components (described more below).
+- tdt4250.unit.kmtomiles: Component for converting distance from **miles** to **kilometers**
+- tdt4250.unit.milestokm: Component for converting distance from **miles** to **kilometers**
+- tdt4250.unit.celsiustofahrenheit: Component for converting temperature from Celsius to Fahrenheit
+- tdt4250.unit.fahrenheittocelsius: Component for converting temperature from Fahrenheit to Celsius
 
-- Km to miles
-- Miles to km
-- Celsius to Fahrenheit
-- Fahrenheit to Celsius
-- Pounds to kg
-- Kg to pounds
+## Gogo shell commands
+
+- `list` - list all active/running conversions
+- `convert {conversion name} {number to convert}` - convert between two units. Syntax
+- `add {conversion name} {conversion equation}`
+- `remove {conversion name}`
 
 ## Adding new conversions:
 
