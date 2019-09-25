@@ -24,7 +24,6 @@ public class UnitSearch {
 	}
 	
 	private UnitSearchResult search(String searchKey, Iterable<Unit> conversions) {
-		System.out.println("Conversions " + conversions);
 		StringBuilder messages = new StringBuilder();
 		URI link = null;
 		boolean success = false;
@@ -32,11 +31,13 @@ public class UnitSearch {
 			UnitSearchResult result = unit.convert(searchKey);
 			if (result.isSuccess()) {
 				messages.append(result.getMessage());
-				messages.append("(" + unit.getUnitName() + ")\n");
 				success = true;
 				if (link == null) {
 					link = result.getLink();
 				}
+				break;
+			} else {
+				messages.append(result.getMessage());
 			}
 		}
 		if (messages.length() == 0) {

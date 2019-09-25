@@ -14,7 +14,8 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=tdt4250.unit.servlet)',\
 	bnd.identity;version='latest';id='tdt4250.unit.kmtomiles',\
-	bnd.identity;version='latest';id='tdt4250.unit.util'
+	bnd.identity;version='latest';id='tdt4250.unit.util',\
+	bnd.identity;version='latest';id='tdt4250.unit.gogo'
 -runbundles: \
 	org.apache.felix.gogo.command;version='[1.0.2,1.0.3)',\
 	org.apache.felix.gogo.runtime;version='[1.0.10,1.0.11)',\
@@ -25,4 +26,6 @@
 	tdt4250.unit.api;version=snapshot,\
 	tdt4250.unit.servlet;version=snapshot,\
 	tdt4250.unit.kmtomiles;version=snapshot,\
-	tdt4250.unit.util;version=snapshot
+	tdt4250.unit.util;version=snapshot,\
+	org.apache.felix.configadmin;version='[1.9.8,1.9.9)',\
+	tdt4250.unit.gogo;version=snapshot

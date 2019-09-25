@@ -6,6 +6,11 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Modified;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.script.*;
+
 import tdt4250.unit.api.Unit;
 import tdt4250.unit.api.UnitSearchResult;
 
@@ -23,6 +28,8 @@ public class UnitsConvert implements Unit {
 
 	private String name;
 	private String conversion;
+	
+	private final ScriptEngine engine =  new ScriptEngineManager().getEngineByName("JavaScript");
 	
 	@Override
 	public String getUnitName() {
@@ -62,21 +69,24 @@ public class UnitsConvert implements Unit {
 		setUnitName(config.unitName());
 		setUnitConversion(config.unitConversion());
 	}
-	
-	protected String getSuccessMessageStringFormat() {
-		return "Yes, %s was found!";
-	}
-
-	protected String getFailureMessageStringFormat() {
-		return "No, %s was not found!";
-	}
 
 	public UnitSearchResult convert(String convertNumber) {
-		if (conversion != null) {
-			return new UnitSearchResult(true, String.format(getSuccessMessageStringFormat(), convertNumber), null);
-		} else {
-			return new UnitSearchResult(false, String.format(getFailureMessageStringFormat(), convertNumber), null);
-		}
+		Map<String, Object> vars = new HashMap<String, Object>();
+		String result = "";
+		Double numb = Double.parseDouble(convertNumber);
+		try {
+			vars.put("x", Double.parseDouble(convertNumber));
+			result = String.format("%.2f", engine.eval(conversion, new SimpleBindings(vars)));
+		} catch (Exception e) {
+			if (e instanceof ScriptException) {
+				String msg = "Ups! Something wrong happened when evaulating the expression, " + conversion + ".";
+				return new UnitSearchResult(false, msg, null);
+			} else if (e instanceof NumberFormatException) {
+				String msg = "Illegal input parameter, " + convertNumber + ". Please try another one!";
+				return new UnitSearchResult(false, msg, null);
+			}	
+		} 
+		return new UnitSearchResult(true, String.format("%s: %.2f converted to %s", getUnitName(), numb, result), null);
 	}
 
 }

@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.util" increment="1569400085087">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.util" increment="1569415441113">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.unit.util"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.201909250828" type="Version"/>
+      <attribute name="version" value="1.0.0.201909251244" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.201909250828" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201909251244" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.unit.util"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.201909250828" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201909251244" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.unit.util"/>
     </capability>
     <capability namespace="osgi.wiring.package">
@@ -23,15 +23,18 @@
       <attribute name="objectClass" value="tdt4250.unit.api.Unit" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="6366" type="Long"/>
+      <attribute name="size" value="7301" type="Long"/>
       <attribute name="url" value="generated/tdt4250.unit.util.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="DE1154B599E9E823B5C64B06FF148FD7F22317CF2659C8F41A9AAFEBE98C4474"/>
+      <attribute name="osgi.content" value="46FC5D45418892751C1B6087EB5B4D0C119E5FA7961BE3046F7EFFE6D16BE416"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/matstyldum/Code/eclipse/tdt4250-assignment2"/>
       <attribute name="project.path" value="/tdt4250.unit.util"/>
     </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.script))"/>
+    </requirement>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
     </requirement>

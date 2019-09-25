@@ -3,7 +3,8 @@
 	osgi.core;version=7.0.0,\
 	osgi.cmpn;version=7.0.0,\
 	tdt4250.unit.api,\
-	org.apache.felix.gogo.runtime
+	org.apache.felix.gogo.runtime,\
+	tdt4250.unit.util
 
 -testpath: \
 	${junit},\
