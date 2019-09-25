@@ -8,8 +8,7 @@ import tdt4250.unit.util.UnitsConvert;
 @Component(
 		property = {
 				UnitsConvert.UNIT_NAME_PROP + "=kmtomiles",
-				UnitsConvert.UNIT_CONVERSION_PROP + "=*1.8"
-				}
+				UnitsConvert.UNIT_CONVERSION_PROP + "=*1.8 + 32"}
 		)
 public class KmToMiles extends UnitsConvert implements Unit {
 }

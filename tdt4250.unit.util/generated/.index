@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.util" increment="1569326609203">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.util" increment="1569400085087">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.unit.util"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.201909241203" type="Version"/>
+      <attribute name="version" value="1.0.0.201909250828" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.201909241203" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201909250828" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.unit.util"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.201909241203" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.201909250828" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.unit.util"/>
     </capability>
     <capability namespace="osgi.wiring.package">
@@ -23,10 +23,10 @@
       <attribute name="objectClass" value="tdt4250.unit.api.Unit" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="6438" type="Long"/>
+      <attribute name="size" value="6366" type="Long"/>
       <attribute name="url" value="generated/tdt4250.unit.util.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="1FF66885F4966C605B810A0C7D87BA03C95BEFB9216E4AC61567E131B5424E2F"/>
+      <attribute name="osgi.content" value="DE1154B599E9E823B5C64B06FF148FD7F22317CF2659C8F41A9AAFEBE98C4474"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/matstyldum/Code/eclipse/tdt4250-assignment2"/>
