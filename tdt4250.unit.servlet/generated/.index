@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.servlet" increment="1569415956532">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.unit.servlet" increment="1569417188196">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.unit.servlet"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="0.0.0.201909251252" type="Version"/>
+      <attribute name="version" value="0.0.0.201909251313" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="0.0.0.201909251252" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201909251313" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.unit.servlet"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="0.0.0.201909251252" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201909251313" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.unit.servlet"/>
     </capability>
     <capability namespace="osgi.service">
@@ -21,7 +21,7 @@
       <attribute name="size" value="5333" type="Long"/>
       <attribute name="url" value="generated/tdt4250.unit.servlet.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="CA839F88A8E87E779A57D01266DA33252189D3928F2C5D56139E053212826631"/>
+      <attribute name="osgi.content" value="BA2BF909D760F496420B0B2983CBB7D1DEACF34536B9044A46921304FD33E040"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/matstyldum/Code/eclipse/tdt4250-assignment2"/>
